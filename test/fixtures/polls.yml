@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source: MyString
+  poller: MyString
+  date: 2014-12-19
+  population: 1
+
+two:
+  source: MyString
+  poller: MyString
+  date: 2014-12-19
+  population: 1

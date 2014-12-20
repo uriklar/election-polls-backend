@@ -1,0 +1,14 @@
+= simple_form_for(@poll) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :source
+    = f.input :poller
+    = f.input :date
+    = f.input :population
+    = f.simple_fields_for :results do |f_results|
+      = f_results.association :party
+      = f_results.input :mandates
+
+  .form-actions
+    = f.button :submit
