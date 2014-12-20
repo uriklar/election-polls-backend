@@ -5,7 +5,10 @@ class PollsController < ApplicationController
   # GET /polls.json
   def index
     @polls = Poll.all
-    render :json => @polls.as_json(:include => :results)
+    respond_to do |format|
+      format.html
+      format.json { render json:  @polls.as_json(:include => :results) }
+    end
   end
 
   # GET /polls/1
