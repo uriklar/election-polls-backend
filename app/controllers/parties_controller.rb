@@ -14,6 +14,10 @@ class PartiesController < ApplicationController
   # GET /parties/1
   # GET /parties/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json:  @party.as_json(:include => {:results => {:include => :poll}}) }
+    end
   end
 
   # GET /parties/new
