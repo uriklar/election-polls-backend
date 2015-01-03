@@ -5,6 +5,7 @@
     %tr
       %th Name
       %th Image
+      %th Color
       %th 
       %th
       %th
@@ -15,6 +16,7 @@
         %td= party.name
         %td
           %img{src: "data:image/png;base64,#{party.image}"}
+        %td= party.color
         %td= link_to 'Show', party
         %td= link_to 'Edit', edit_party_path(party)
         %td= link_to 'Destroy', party, :method => :delete, :data => { :confirm => 'Are you sure?' }
