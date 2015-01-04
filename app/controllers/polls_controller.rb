@@ -31,7 +31,6 @@ class PollsController < ApplicationController
   # POST /polls
   # POST /polls.json
   def create
-    debugger
     @poll = Poll.new(poll_params)
 
     respond_to do |format|
