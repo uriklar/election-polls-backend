@@ -12,7 +12,7 @@
       %th
       
   %tbody
-    - @polls.sort_by(&:date).each do |poll|
+    - @polls.each do |poll|
       %tr
         %td= poll.source
         %td= poll.poller

@@ -4,7 +4,7 @@ class PollsController < ApplicationController
   # GET /polls
   # GET /polls.json
   def index
-    @polls = Poll.all
+    @polls = Poll.all.sort_by(:date)
     respond_to do |format|
       format.html
       format.json { render json:  @polls.as_json(:include => :results) }
